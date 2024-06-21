@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner s= new Scanner(System.in);
+        int n = s.nextInt();
+        int sum = 0;
+        for (int i = 0; i < String.valueOf(n).length(); i++)
+        {
+            int digit = Character.getNumericValue(String.valueOf(n).charAt(i));
+            sum += factorial(digit);
+        }
+        System.out.println(sum);
+    }
+
+    public static int factorial(int n)
+    {
+        int fact = 1;
+        for (int i=2;i<= n;i++) 
+        {
+            fact*=i;
+        }
+        return fact;
+    }
+}
+       
