@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        char G;
+        int age;
+        Scanner s=new Scanner(System.in);
+        G=s.next().charAt(0);
+        age=s.nextInt();
+        if(G=='m'|| G=='M')
+        if(age>=60)
+        {
+            System.out.println("Senior Citizen");
+        }
+        else
+        {
+            
+          System.out.println("Not A Senior Citizen");  
+        }
+        else 
+        {
+            if(age>=58)
+            {
+        System.out.println("Senior Citizen");
+            }
+             else
+             {
+        System.out.println("Not A Senior Citizen");  
+    }
+}
+    }
+}
+    
