@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        scanner.nextLine();  
+        String[] results = new String[t];
+        for (int i = 0; i < t; i++) {
+            String line = scanner.nextLine();
+            String[] parts = line.split(" ");
+            int A = Integer.parseInt(parts[0]);
+            String S = parts[1];
+            int B = Integer.parseInt(parts[2]);
+            int C = Integer.parseInt(parts[4]);
+            int result = 0;
+            if (S.equals("+")) {
+                result = A + B;
+            } else if (S.equals("-")) {
+                result = A - B;
+            } else if (S.equals("*")) {
+                result = A * B;
+            }
+            if (result == C) {
+                results[i] = "Yes";
+            } else {
+                results[i] = String.valueOf(result);
+            }
+        }
+        for (String res : results) {
+            System.out.println(res);
+        }
+        
+        scanner.close();
+    }
+}
