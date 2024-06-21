@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+        int l,h,sum=0;
+        l=s.nextInt();
+        h=s.nextInt();
+        for(int i=l;i<=h;i++)
+        {
+             sum=sum+i;
+        }
+        System.out.println(sum);
+    }
+}
+    
