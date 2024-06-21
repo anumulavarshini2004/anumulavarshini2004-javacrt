@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+
+   int a;
+    Scanner s=new Scanner(System.in);
+        a=s.nextInt();
+    if(a!=a*10){
+        if(a<=20){
+            System.out.println(a+2);
+        }
+        else if(a>=120&&a<=140){
+            System.out.println(a-4);
+        }
+        else if(a>=140&&a<=200){
+           System.out.println(a+5);
+        }
+    }
+      else
+       System.out.println(a);
+}
+    }
