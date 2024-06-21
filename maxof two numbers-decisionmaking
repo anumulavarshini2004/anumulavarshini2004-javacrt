@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        long a,b;
+        a=s.nextLong();
+        b=s.nextLong();
+        if(a>b)
+        {
+            System.out.println(a);
+        }
+        else
+        {
+            System.out.println(b);
+        }
+    }
+}
