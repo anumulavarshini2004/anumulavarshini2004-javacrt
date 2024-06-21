@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner s=new Scanner(System.in);
+    int a,b,c;
+    float h;
+    a=s.nextInt();
+    b=s.nextInt();
+    c=s.nextInt();
+    h=s.nextFloat();    
+    int sq=a*a;
+    int r=c*b;
+    float d=(float)3.14*h*h;
+    System.out.println(sq);
+    System.out.println(r);
+    System.out.printf("%.2f",d);
+}
+    
+}
