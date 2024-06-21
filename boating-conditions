@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int w,a,c;
+        Scanner s=new Scanner(System.in);
+        w=s.nextInt();
+        a=s.nextInt();
+        c=s.nextInt();
+        int v=a*75+c*30;
+    if(v<=w)
+        System.out.println("Boat is stable");
+    else
+        System.out.println("Boat will drown");
+    
+    }
+}
