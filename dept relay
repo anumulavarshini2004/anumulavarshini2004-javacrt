@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int p,t,r;
+        Scanner s=new Scanner(System.in);
+        p=s.nextInt();
+        t=s.nextInt();
+        r=s.nextInt();
+        float r1=p*t*r/100;
+    System.out.printf("%.2f\n",r1);
+    float r2=p+r1;
+    System.out.printf("%.2f\n",r2);
+    float r3=r1*2/100;
+    System.out.printf("%.2f\n",r3);
+    float r4=r2-r3;
+   System.out.printf("%.2f",r4);
+    
+    }
+}
