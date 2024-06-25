@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PrefixSum {
+    public static void main(String[] args) 
+    {
+        Scanner s=new Scanner(System.in);
+        int numSize=s.nextInt();
+        int numList[]=new int[numSize];
+        int prefixSumList[]=new int[numSize];
+        for (int i=0;i<numSize;i++) 
+        {
+            numList[i]=s.nextInt();
+        }
+        int currentSum = 0;
+        for (int i=0;i<numSize;i++)
+        {
+            currentSum+=numList[i];
+            prefixSumList[i]=currentSum;
+        }
+        for (int i=0;i<numSize;i++)
+        {
+            System.out.print(prefixSumList[i]);
+            if (i<numSize-1) {
+                System.out.print(" ");
+            }
+        }
+        s.close();
+    }
+}
