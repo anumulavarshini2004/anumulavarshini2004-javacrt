@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SumOfEvenOdd {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        int n =s.nextInt();
+        long sumOdd = 0;
+        long sumEven = 0;
+        for (int i=0;i<n;i++) {
+            int element=s.nextInt();
+            if (element%2==0) {
+                sumEven += element;
+            } else {
+                sumOdd += element;
+            }
+        }
+        System.out.println(sumOdd);
+        System.out.println(sumEven);
+        s.close();
+    }
+}
