@@ -1,0 +1,67 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n, m;
+   n=s.nextInt();
+        m=s.nextInt();
+    int matrix[][]=new int[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            matrix[i][j]=s.nextInt();
+        }
+    }
+    int rowSum[]=new int[n];
+    int colSum[]=new int[m];
+    for (int i=0;i<n;i++) {
+        rowSum[i]=0;
+    }
+    for (int j=0;j<m;j++) {
+        colSum[j]=0;
+    }
+    for (int i=0;i<n;i++)
+    {
+        for (int j = 0; j < m; j++) 
+        {
+            rowSum[i] += matrix[i][j];
+            colSum[j] +=matrix[i][j];
+        }
+    }
+    int maxRowSum=rowSum[0];
+    int maxRowIndex=0;
+    for (int i=1;i<n;i++) {
+        if (rowSum[i]>maxRowSum) {
+            maxRowSum=rowSum[i];
+            maxRowIndex=i;
+        }
+    }
+    int maxColSum=colSum[0];
+    int maxColIndex=0;
+    for (int j=1;j<m;j++)
+    {
+        if (colSum[j]>maxColSum)
+        {
+            maxColSum=colSum[j];
+            maxColIndex=j;
+        }
+    }
+    for (int i=0;i<n;i++) 
+    {
+       System.out.print(rowSum[i]+" ");
+        if (i<n-1) {
+         
+          System.out.println(maxRowIndex);
+ }
+    }
+    for (int j=0;j<m;j++) {
+       System.out.print(colSum[j]+" ");
+        if (j<m-1)
+        {
+   System.out.println(maxColIndex);
+    }
+    }
+    }
+}
