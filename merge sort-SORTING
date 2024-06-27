@@ -1,0 +1,52 @@
+import java.util.*;
+class MergeSort
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int m=s.nextInt();
+int arr1[]=new int[m];
+for(int i=0;i<m;i++)
+{
+arr1[i]=s.nextInt();
+}
+int n=s.nextInt();
+int arr2[]=new int[n];
+for(int i=0;i<n;i++)
+{
+arr2[i]=s.nextInt();
+}
+int c[]=new int[m+n];
+int i=0,j=0,k=0;
+while(i<m && j<n)
+{
+if(arr1[i]<arr2[j])
+{
+c[k]=arr1[i];
+i++;
+k++;
+}
+else
+{
+c[k]=arr2[j];
+j++;
+k++;
+}
+}
+while(i<m)
+{
+c[k]=arr1[i];
+k++;
+i++;
+}
+while(j<n)
+{
+c[k]=arr2[j];
+k++;
+j++;
+}
+for(i=0;i<c.length;i++)
+System.out.print(c[i]+" ");
+}
+}
+
