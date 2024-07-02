@@ -1,0 +1,14 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str1=s.next();
+        String str2=s.next();
+        String str3=str1.concat(" ");
+        System.out.println(str3.concat(str2));
+        
+    }
+}
