@@ -1,0 +1,10 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner s=new Scanner(System.in);
+	    String str1="235";
+	    String str2="534";
+	    System.out.println(Integer.parseInt(str1)+Integer.parseInt(str2));
+	}
+}
