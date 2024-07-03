@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+
+        int vowelCount=0;
+        char[] vowels={'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+        for (int i=0;i<str.length();i++) {
+            char currentChar=str.charAt(i);
+            for (int j=0; j<vowels.length;j++) {
+                if (currentChar==vowels[j]) {
+                    vowelCount++;
+                    break;
+                }
+            }
+        }
+        System.out.println(vowelCount);
+    }
+}
