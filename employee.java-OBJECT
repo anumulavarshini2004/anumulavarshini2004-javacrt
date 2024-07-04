@@ -1,0 +1,27 @@
+import java.util.*;
+class Employee
+{
+String empname;
+int salary;
+void get(String x,int y)
+{
+empname=x;
+salary=y;
+}
+void show()
+{
+System.out.println(empname+" "+salary);
+}
+}
+class Employee2
+{
+public static void main(String args[])
+{
+Employee e1=new Employee();
+e1.get("varshini",25000);
+Employee e2=new Employee();
+e2.get("xyz",15000);
+e1.show();
+e2.show();
+}
+}
