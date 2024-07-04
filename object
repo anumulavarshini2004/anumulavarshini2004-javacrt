@@ -1,0 +1,17 @@
+import java.util.*;
+class Sample
+{
+int a;
+double b;
+public static void main(String args[])
+{
+Sample s1=new Sample();
+s1.a=100;
+s1.b=35.5;
+System.out.println(s1.a+" "+s1.b);
+Sample s2=new Sample();
+s2.a=23;
+s2.b=21.2;
+System.out.println(s2.a+" "+s2.b);
+}
+}
