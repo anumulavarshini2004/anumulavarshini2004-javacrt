@@ -1,0 +1,23 @@
+import java.util.*;
+class MethodOverloading
+{
+void show(int a,int b)
+{
+System.out.println("2 arg int method");
+}
+void show(int a,int b,int c)
+{
+System.out.println("3 arg int method");
+}
+void show(double a,double b)
+{
+System.out.println("2 arg double method");
+}
+public static void main(String args[])
+{
+MethodOverloading m1=new MethodOverloading();
+m1.show(11,22,33);
+m1.show(22,33);
+m1.show(23.1,54.2);
+}
+}
