@@ -1,0 +1,33 @@
+import java.util.*;
+class Father
+{
+void surName()
+{
+System.out.println("A");
+}
+void designation()
+{
+System.out.println("student");
+}
+}
+class Child extends Father
+{
+void getName()
+{
+System.out.println("varshini");
+}
+void designation()
+{
+System.out.println("java programmer");
+}
+}
+class TestMethod{
+public static void main(String args[])
+{
+Child c1=new Child();
+c1.surName();
+c1.getName();
+c1.designation();
+}
+}
+
