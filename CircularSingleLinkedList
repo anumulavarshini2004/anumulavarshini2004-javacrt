@@ -1,0 +1,223 @@
+import java.util.*;
+class Node
+{
+int data;
+Node next;
+Node(int x)
+{
+data=x;
+next=null;
+}
+}
+class CircularSingleList
+{
+Node head;
+CircularSingleList()
+{
+head=null;
+}
+void create(int x)
+{
+Node n=new Node(x);
+if(head==null)
+{
+head=n;
+n.next=head;
+}
+else
+{
+Node temp=head;
+while(temp.next!=head)
+{
+temp=temp.next;
+}
+n.next=head;
+temp.next=n;
+}
+}
+void display()
+{
+if(head==null)
+{
+System.out.println("List is empty");
+return;
+}
+Node temp=head;
+while(temp.next!=head)
+{
+System.out.print(temp.data+" ");
+temp=temp.next;
+}
+System.out.print(temp.data);
+} 
+void insertFirst(int x)
+{
+Node n=new Node(x);
+if(head==null)
+{
+head=n;
+n.next=head;
+}
+else
+{
+n.next=head;
+Node temp=head;
+while(temp.next!=head)
+{
+temp=temp.next;
+}
+temp.next=n;
+head=n;
+}
+}
+void insertPos(int x,int pos)
+{
+Node n=new Node(x);
+if(pos==1)
+{
+insertFirst(x);
+return;
+}
+int cnt=2;
+Node temp=head;
+while(temp.next!=head&&cnt<pos)
+{
+temp=temp.next;
+cnt++;
+}
+if(temp.next==head)
+{
+n.next=head;
+temp.next=n;
+}
+else
+{
+n.next=temp.next;
+temp.next=n;
+}
+}
+void deleteFirst()
+{
+if(head==null)
+{
+System.out.println("List is empty");
+return;
+}
+if(head.next==head)
+{
+head=null;
+return;
+}
+Node temp=head;
+while(temp.next!=head)
+{
+temp=temp.next;
+}
+temp.next=head.next;
+head=head.next;
+}
+void deleteLast()
+{
+if(head==null)
+{
+System.out.println("List is empty");
+return;
+}
+if(head.next==head)
+{
+System.out.println(head.data+" is deleted");
+head=null;
+return;
+}
+Node temp=head;
+while(temp.next.next!=head)
+{
+System.out.println(temp.next.data+" is deleted");
+temp=temp.next;
+}
+temp.next=head;
+}
+void deletePos(int pos)
+{
+if(pos==1)
+{
+deleteFirst();
+return;
+}
+int cnt=2;
+Node temp=head;
+while(temp.next.next!=head&&cnt<pos)
+{
+temp=temp.next;
+}
+if(temp.next.next==head)
+{
+System.out.println(temp.next.data+" is deleted");
+temp.next=head;
+return;
+}
+System.out.println(temp.next.data+" is deleted");
+Node temp1=temp.next;
+temp.next=temp.next.next;
+temp1.next=null;		
+}
+}
+class CSL
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+CircularSingleList c1=new CircularSingleList();
+for(;;)
+{
+System.out.println();
+System.out.println("\n1.Create\n2.Print\n3.Insert First\n4.Insert at Position\n5.Delete First\n6.Delete Last\n7.Delete at Position\n8.Exit");
+System.out.println("Enter your choice");
+int ch=s.nextInt();
+if(ch==1)
+{
+int x;
+System.out.println("Enter a element");
+x=s.nextInt();
+c1.create(x);
+}
+else if(ch==2)
+{	
+c1.display();
+}
+else if(ch==3)
+{
+System.out.println("Enter a element");
+int x=s.nextInt();		
+c1.insertFirst(x);
+}
+else if(ch==4)
+{
+System.out.println("Enter element and position");
+int x=s.nextInt();
+int pos=s.nextInt();
+c1.insertPos(x,pos);
+}
+else if(ch==5)
+{
+c1.deleteFirst();
+}
+else if(ch==6)
+{
+c1.deleteLast();
+}
+else if(ch==7)
+{
+System.out.println("Enter position");
+int pos=s.nextInt();
+c1.deletePos(pos);
+}
+else if(ch==8)
+{
+break;
+}
+else
+System.out.println("Wrong Choice");
+}
+}
+}
